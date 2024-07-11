@@ -321,3 +321,175 @@ footer nav li a:hover {
   border-color: var(--button-hover-color);
   cursor: pointer;
 }
+
+
+/* Estilos para la información de certificaciones */
+.informacion-certificaciones {
+  background-color: var(--background-color); /* Color de fondo */
+  padding: 40px 20px;
+}
+
+.informacion-certificaciones h2 {
+  text-align: center;
+  color: var(--header-bg-color); /* Color del encabezado */
+  margin-bottom: 30px; /* Espacio inferior para separar del primer contenedor */
+}
+
+.certificacion {
+  background-color: var(--secondary-color); /* Color de fondo del contenedor de certificación */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px; /* Espacio entre certificaciones */
+}
+
+.certificacion h3 {
+  font-size: 24px;
+  color: var(--primary-color); /* Color del título */
+  margin-bottom: 10px;
+}
+
+.certificacion p {
+  line-height: 1.6;
+  color: #333; /* Color del texto */
+}
+
+
+/* Estilos para la sección de foro y comunidad */
+.foro-comunidad {
+  background-color: var(--background-color); /* Color de fondo */
+  padding: 40px 20px;
+}
+
+.foro-comunidad h2 {
+  text-align: center;
+  color: var(--header-bg-color); /* Color del encabezado */
+  margin-bottom: 30px; /* Espacio inferior */
+}
+
+.publicaciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.publicacion {
+  background-color: var(--secondary-color); /* Color de fondo de las publicaciones */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.publicacion h3 {
+  font-size: 20px;
+  color: var(--primary-color); /* Color del título */
+  margin-bottom: 10px;
+}
+
+.publicacion .autor {
+  color: var(--header-bg-color); /* Color del autor */
+  font-style: italic;
+}
+
+.publicacion .fecha {
+  color: #666; /* Color de la fecha */
+  margin-bottom: 10px;
+}
+
+.publicacion .contenido {
+  line-height: 1.6;
+  color: #333; /* Color del texto */
+}
+
+.crear-publicacion {
+  margin-top: 40px;
+}
+
+.crear-publicacion h3 {
+  color: var(--header-bg-color); /* Color del título de crear publicación */
+}
+
+form .form-group {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primary-color); /* Color de las etiquetas */
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: var(--primary-color); /* Color del botón */
+  color: var(--secondary-color); /* Color del texto del botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--button-hover-color); /* Color al pasar el cursor */
+}
+
+
+/* Estilos para la sección de cierre de sesión */
+.cierre {
+  background-color: var(--background-color); /* Color de fondo */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cierre h2 {
+  color: var(--header-bg-color); /* Color del encabezado */
+  margin-bottom: 30px; /* Espacio inferior */
+}
+
+.cierre .mensaje {
+  margin-bottom: 30px;
+  color: var(--header-bg-color); /* Color del texto */
+}
+
+.cierre .acciones {
+  display: flex;
+  justify-content: center;
+}
+
+.cierre .acciones .boton {
+  margin: 0 10px;
+  padding: 12px 24px; /* Aumento del padding para un mejor aspecto */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cierre .acciones .boton-primario {
+  background-color: var(--primary-color); /* Color del botón primario */
+  color: var(--secondary-color); /* Color del texto del botón primario */
+}
+
+.cierre .acciones .boton-primario:hover {
+  background-color: var(--button-hover-color); /* Color al pasar el cursor */
+  transform: scale(1.05);
+}
+
+.cierre .acciones .boton-secundario {
+  background-color: transparent;
+  border: 2px solid var(--header-bg-color); /* Color del borde del botón secundario */
+  color: var(--header-bg-color); /* Color del texto del botón secundario */
+}
+
+.cierre .acciones .boton-secundario:hover {
+  background-color: var(--header-bg-color); /* Color al pasar el cursor */
+  color: var(--secondary-color); /* Color del texto al pasar el cursor */
+}
