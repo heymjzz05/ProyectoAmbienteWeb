@@ -263,3 +263,61 @@ footer nav li a {
 footer nav li a:hover {
   color: var(--primary-color);
 }
+
+
+/* Registro Styles */
+.registro {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.registro h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.registro .form-group {
+  margin-bottom: 20px;
+}
+
+.registro label {
+  display: block;
+  margin-bottom: 8px; /* Espacio entre etiqueta y campo */
+  color: var(--primary-color); /* Color de etiqueta */
+}
+
+.registro .form-control {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.registro .form-control:focus {
+  outline: none;
+  border-color: var(--button-hover-color);
+  box-shadow: 0 0 8px rgba(100, 138, 100, 0.5);
+}
+
+.registro .btn-primary {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #ffffff;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.registro .btn-primary:hover {
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+  cursor: pointer;
+}
