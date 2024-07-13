@@ -1,0 +1,251 @@
+/* Variables */
+:root {
+    --primary-color: #648A64; /* Color primario */
+    --secondary-color: #ffffff; /* Color secundario */
+    --background-color: #f4f4f4; /* Color de fondo */
+    --header-bg-color: #213435; /* Color de fondo del header */
+    --button-hover-color: #46685B; /* Color de los botones al pasar el cursor */
+    --font-family: 'Roboto', sans-serif; /* Familia de fuentes */
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--header-bg-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    box-shadow: 0 4px 6px rgba(33, 52, 53, 0.1);
+  }
+  
+  .contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logotipo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-decoration: none;
+  }
+  
+  .logotipo:hover {
+    color: var(--primary-color);
+  }
+  
+  nav {
+    display: flex;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin: 0;
+    padding: 0 15px;
+  }
+  
+  nav li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav li a:hover {
+    color: #A6B985;
+  }
+  
+  nav li a.boton-primario, nav li a.boton-secundario {
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  nav li a.boton-primario {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+  }
+  
+  nav li a.boton-primario:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+  }
+  
+  nav li a.boton-secundario {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+  }
+  
+  nav li a.boton-secundario:hover {
+    background-color: var(--secondary-color);
+    color: var(--header-bg-color);
+    transform: scale(1.05);
+  }
+  
+  .seccion-heroe .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .contenido-heroe {
+    text-align: center;
+    color: var(--secondary-color);
+  }
+  
+  .beneficios .contenedor {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .beneficios .cuadricula-beneficios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  /* Beneficios Styles */
+  .beneficios {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    color: #333; /* Cambia el color del texto a negro */
+  }
+  
+  .beneficios .cuadricula-beneficios {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .beneficio {
+    text-align: center;
+    margin: 20px;
+    max-width: 300px;
+  }
+  
+  .beneficio i {
+    font-size: 40px;
+    color: var(--primary-color);
+  }
+  
+  .beneficio h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    color: var(--header-bg-color);
+  }
+  
+  
+  /* Llamada a la Acción Styles */
+  .llamada-a-la-accion {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    color: #333; /* Cambia el color del texto a negro */
+  }
+  
+  .llamada-a-la-accion h2 {
+    margin-bottom: 20px;
+    color: var(--header-bg-color);
+  }
+  
+  
+  /* Button Styles */
+  .boton {
+    display: inline-xock;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .boton-primario {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+  }
+  
+  .boton-primario:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+  }
+  
+  .boton-secundario {
+    background-color: transparent;
+    color: var(--header-bg-color);
+    border: 2px solid var(--header-bg-color);
+  }
+  
+  .boton-secundario:hover {
+    background-color: var(--header-bg-color);
+    color: var(--secondary-color);
+    transform: scale(1.05);
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: var(--header-bg-color);
+    color: var(--secondary-color);
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+  }
+  
+  footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  footer nav li {
+    margin: 0 10px;
+  }
+  
+  footer nav li a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  footer nav li a:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Colores del Tema */
+  .color1 { 
+    background-color: #648A64;
+  }
+
+  .color2 { 
+    background-color: #46685B;
+  }
+
+  .color5 { 
+    background-color: #e1e3ac;
+  }
+
+  /* BG Soporte */
+  .main-bg-soporte {
+    background: url(https://wallpapercave.com/wp/wp2916561.jpg);
+    background-size: cover;
+    background-position: 10%;
+  }
+
+  .div-bg-soporte {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
