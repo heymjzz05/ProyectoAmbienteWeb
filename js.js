@@ -10,7 +10,8 @@ function toggleActiveLink(event) {
   
   // Agrega escuchadores de eventos a los enlaces de navegación
   const navLinks = document.querySelectorAll('nav ul li a');
-  navLinks.forEach(link => link.addEventListener('click', toggleActiveLink));
+  navLinks.forEach(link => link.addEventListener('click', toggleActiveLink)); //Listo
+
   
 
   //Productos
