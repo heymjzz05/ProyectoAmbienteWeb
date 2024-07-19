@@ -1,22 +1,35 @@
+/* Variables */
+:root {
+  --primary-color: #648A64; /* Color primario */
+  --secondary-color: #ffffff; /* Color secundario */
+  --background-color: #f4f4f4; /* Color de fondo */
+  --header-bg-color: #213435; /* Color de fondo del header */
+  --button-hover-color: #46685B; /* Color de los botones al pasar el cursor */
+  --font-family: 'Roboto', sans-serif; /* Familia de fuentes */
+}
+
 /* General Styles */
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: var(--background-color);
   color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header Styles */
 header {
-  background-color: #2c3e50;
-  color: #fff;
+  background-color: var(--header-bg-color);
+  color: var(--secondary-color);
   padding: 20px 0;
-  box-shadow: 0 4px 6px rgba(162, 6, 6, 0.1);
+  box-shadow: 0 4px 6px rgba(33, 52, 53, 0.1);
 }
 
 .contenedor {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
@@ -27,7 +40,12 @@ header {
 .logotipo {
   font-size: 28px;
   font-weight: bold;
-  color: #1abc9c;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.logotipo:hover {
+  color: var(--primary-color);
 }
 
 nav {
@@ -48,240 +66,204 @@ nav li {
 
 nav li a {
   text-decoration: none;
-  color: #fff;
+  color: var(--secondary-color);
   font-weight: bold;
   transition: color 0.3s;
 }
 
 nav li a:hover {
-  color: #1abc9c;
+  color: #A6B985;
 }
 
-nav li a.boton-primario {
-  background-color: #1abc9c;
-  color: #fff;
+nav li a.boton-primario, nav li a.boton-secundario {
   padding: 10px 20px;
-  border: none;
   border-radius: 5px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
+nav li a.boton-primario {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: none;
+}
+
 nav li a.boton-primario:hover {
-  background-color: #16a085;
+  background-color: var(--button-hover-color);
   transform: scale(1.05);
 }
 
 nav li a.boton-secundario {
   background-color: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-  padding: 10px 20px;
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
 }
 
 nav li a.boton-secundario:hover {
-  background-color: #fff;
-  color: #2c3e50;
+  background-color: var(--secondary-color);
+  color: var(--header-bg-color);
   transform: scale(1.05);
 }
 
 /* Main Content Styles */
 main {
+  position: relative;
   padding: 40px 0;
+  background: url('https://www.bbva.com/wp-content/uploads/2021/05/agricultores-familiares-alimentos-sostenibilidad-pequenas-empresas-cuidado-agricultura-verduras--1024x629.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: var(--secondary-color);
+  flex: 1; /* Esto hace que el main ocupe el espacio restante */
+}
+
+main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Capa semi-transparente más oscura */
 }
 
 section {
+  position: relative;
+  z-index: 1;
   margin-bottom: 40px;
 }
 
-.seccion-heroe {
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 100px 0;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+.seccion-heroe .contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
 }
 
 .contenido-heroe {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.texto-heroe {
-  flex: 1;
-  max-width: 500px;
-}
-
-.texto-heroe h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.texto-heroe p {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.imagen-heroe {
-  flex: 1;
-  max-width: 500px;
-  width: 100%;
-}
-
-.imagen-heroe img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.beneficios {
   text-align: center;
+  color: var(--secondary-color);
 }
 
-.beneficios h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.beneficios .contenedor {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.cuadrícula-beneficios {
+.beneficios .cuadricula-beneficios {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+/* Beneficios Styles */
+.beneficios {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  color: #333; /* Cambia el color del texto a negro */
+}
+
+.beneficios .cuadricula-beneficios {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .beneficio {
   text-align: center;
-  margin: 10px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  width: 300px;
-}
-
-.beneficio:hover {
-  transform: translateY(-5px);
+  margin: 20px;
+  max-width: 300px;
 }
 
 .beneficio i {
-  font-size: 32px;
-  color: #1abc9c;
-  margin-bottom: 10px;
+  font-size: 40px;
+  color: var(--primary-color);
 }
 
 .beneficio h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+  color: var(--header-bg-color);
 }
 
-.beneficio p {
-  font-size: 16px;
-  color: #777;
-}
 
+/* Llamada a la Acción Styles */
 .llamada-a-la-accion {
   text-align: center;
-  background-color: #2c3e50;
-  color: #fff;
-  padding: 40px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #333; /* Cambia el color del texto a negro */
 }
 
 .llamada-a-la-accion h2 {
-  font-size: 32px;
   margin-bottom: 20px;
+  color: var(--header-bg-color);
 }
 
-.llamada-a-la-accion p {
-  font-size: 18px;
-  margin-bottom: 20px;
+
+/* Button Styles */
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
+.boton-primario {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.boton-primario:hover {
+  background-color: var(--button-hover-color);
+  transform: scale(1.05);
+}
+
+.boton-secundario {
+  background-color: transparent;
+  color: var(--header-bg-color);
+  border: 2px solid var(--header-bg-color);
+}
+
+.boton-secundario:hover {
+  background-color: var(--header-bg-color);
+  color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* Footer Styles */
 footer {
-  background-color: #2c3e50;
-  color: #fff;
+  background-color: var(--header-bg-color);
+  color: var(--secondary-color);
   padding: 20px 0;
-}
-
-footer .contenedor {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-footer .columna-pie-de-pagina {
-  flex: 1;
   text-align: center;
+  position: relative;
 }
 
 footer nav ul {
   display: flex;
+  justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 footer nav li {
-  margin: 0;
-  padding: 0 10px;
+  margin: 0 10px;
 }
 
 footer nav li a {
+  color: var(--secondary-color);
   text-decoration: none;
-  color: #fff;
+  transition: color 0.3s;
 }
 
 footer nav li a:hover {
-  color: #1abc9c;
+  color: var(--primary-color);
 }
-
-footer nav li img {
-  vertical-align: middle;
-  margin-right: 5px;
-}
-
-
-
-
-/* estilos de login*/
-
-main {
-    padding: 40px 0;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-.seccion-inicio-sesion {
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    color: #333;
-    padding: 100px 0;
-}
-
-.formulario-inicio-sesion {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.formulario-inicio-sesion h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
+/* Branch de Anthony */
 
 .formulario-inicio-sesion label {
     display: block;
@@ -430,3 +412,4 @@ Style de Detalles Producto
     margin-top: 20px;
     font-size: 16px;
 }
+
