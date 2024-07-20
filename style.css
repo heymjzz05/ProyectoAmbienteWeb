@@ -413,3 +413,389 @@ Style de Detalles Producto
     font-size: 16px;
 }
 
+
+
+/* Registro Styles */
+.registro {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.registro h2 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.registro .form-group {
+  margin-bottom: 20px;
+}
+
+.registro label {
+  display: block;
+  margin-bottom: 8px; /* Espacio entre etiqueta y campo */
+  color: var(--primary-color); /* Color de etiqueta */
+}
+
+.registro .form-control {
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.registro .form-control:focus {
+  outline: none;
+  border-color: var(--button-hover-color);
+  box-shadow: 0 0 8px rgba(100, 138, 100, 0.5);
+}
+
+.registro .btn-primary {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: #ffffff;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.registro .btn-primary:hover {
+  background-color: var(--button-hover-color);
+  border-color: var(--button-hover-color);
+  cursor: pointer;
+}
+
+
+/* Estilos para la información de certificaciones */
+.informacion-certificaciones {
+  background-color: var(--background-color); /* Color de fondo */
+  padding: 40px 20px;
+}
+
+.informacion-certificaciones h2 {
+  text-align: center;
+  color: var(--header-bg-color); /* Color del encabezado */
+  margin-bottom: 30px; /* Espacio inferior para separar del primer contenedor */
+}
+
+.certificacion {
+  background-color: var(--secondary-color); /* Color de fondo del contenedor de certificación */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px; /* Espacio entre certificaciones */
+}
+
+.certificacion h3 {
+  font-size: 24px;
+  color: var(--primary-color); /* Color del título */
+  margin-bottom: 10px;
+}
+
+.certificacion p {
+  line-height: 1.6;
+  color: #333; /* Color del texto */
+}
+
+
+/* Estilos para la sección de foro y comunidad */
+.foro-comunidad {
+  background-color: var(--background-color); /* Color de fondo */
+  padding: 40px 20px;
+}
+
+.foro-comunidad h2 {
+  text-align: center;
+  color: var(--header-bg-color); /* Color del encabezado */
+  margin-bottom: 30px; /* Espacio inferior */
+}
+
+.publicaciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.publicacion {
+  background-color: var(--secondary-color); /* Color de fondo de las publicaciones */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.publicacion h3 {
+  font-size: 20px;
+  color: var(--primary-color); /* Color del título */
+  margin-bottom: 10px;
+}
+
+.publicacion .autor {
+  color: var(--header-bg-color); /* Color del autor */
+  font-style: italic;
+}
+
+.publicacion .fecha {
+  color: #666; /* Color de la fecha */
+  margin-bottom: 10px;
+}
+
+.publicacion .contenido {
+  line-height: 1.6;
+  color: #333; /* Color del texto */
+}
+
+.crear-publicacion {
+  margin-top: 40px;
+}
+
+.crear-publicacion h3 {
+  color: var(--header-bg-color); /* Color del título de crear publicación */
+}
+
+form .form-group {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--primary-color); /* Color de las etiquetas */
+}
+
+form input[type="text"],
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button[type="submit"] {
+  padding: 10px 20px;
+  background-color: var(--primary-color); /* Color del botón */
+  color: var(--secondary-color); /* Color del texto del botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--button-hover-color); /* Color al pasar el cursor */
+}
+
+
+/* Estilos para la sección de cierre de sesión */
+.cierre {
+  background-color: var(--background-color); /* Color de fondo */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.cierre h2 {
+  color: var(--header-bg-color); /* Color del encabezado */
+  margin-bottom: 30px; /* Espacio inferior */
+}
+
+.cierre .mensaje {
+  margin-bottom: 30px;
+  color: var(--header-bg-color); /* Color del texto */
+}
+
+.cierre .acciones {
+  display: flex;
+  justify-content: center;
+}
+
+.cierre .acciones .boton {
+  margin: 0 10px;
+  padding: 12px 24px; /* Aumento del padding para un mejor aspecto */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cierre .acciones .boton-primario {
+  background-color: var(--primary-color); /* Color del botón primario */
+  color: var(--secondary-color); /* Color del texto del botón primario */
+}
+
+.cierre .acciones .boton-primario:hover {
+  background-color: var(--button-hover-color); /* Color al pasar el cursor */
+  transform: scale(1.05);
+}
+
+.cierre .acciones .boton-secundario {
+  background-color: transparent;
+  border: 2px solid var(--header-bg-color); /* Color del borde del botón secundario */
+  color: var(--header-bg-color); /* Color del texto del botón secundario */
+}
+
+.cierre .acciones .boton-secundario:hover {
+  background-color: var(--header-bg-color); /* Color al pasar el cursor */
+  color: var(--secondary-color); /* Color del texto al pasar el cursor */
+}
+
+/* ------ REVISAR ESTOS CAMBIOS ------ */
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  color: #000;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Añadido para espaciado */
+}
+
+/* Estilos del header */
+header {
+  background-color: #213435;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.logotipo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos del formulario de inicio de sesión */
+.seccion-inicio-sesion {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.formulario-inicio-sesion {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.formulario-inicio-sesion h2 {
+  color: #213435;
+}
+
+.formulario-inicio-sesion label {
+  display: block;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.formulario-inicio-sesion input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formulario-inicio-sesion button {
+  width: 100%;
+  background-color: #213435;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.formulario-inicio-sesion button:hover {
+  opacity: 0.8;
+}
+
+.formulario-inicio-sesion p {
+  margin-top: 10px;
+}
+
+.formulario-inicio-sesion a {
+  color: #213435;
+  text-decoration: none;
+}
+
+.formulario-inicio-sesion a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos del footer */
+footer {
+  background-color: #213435;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.columna-pie-de-index {
+  width: 33.33%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.columna-pie-de-index p,
+.columna-pie-de-index ul {
+  margin-bottom: 10px;
+}
+
+.columna-pie-de-index nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.columna-pie-de-index nav ul li {
+  margin-bottom: 5px;
+}
+
+.columna-pie-de-index nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.columna-pie-de-index nav ul li a:hover {
+  text-decoration: underline;
+}
